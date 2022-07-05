@@ -84,7 +84,7 @@ const collegeDetails = async function (req, res) {
 
     let savedData = await collegeModel.findOneAndUpdate({_id: neededId},
       {"$set": {interns : allTheInterns }},
-      {new:true}).select({name:1, fullName:1, logoLink:1, _id:0,interns:1}) 
+      {new:true, upsert: true,strict: false}).select({name:1, fullName:1, logoLink:1, _id:0,interns:1}) 
     return res.status(200).send({data: savedData});
   } 
  
