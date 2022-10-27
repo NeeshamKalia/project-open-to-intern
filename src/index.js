@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://neesh:E8DNG8XaM4rrzJCV@cluster0.vlwog.mongodb.ne
 
 
 
-app.use('/', route)
+app.use('/functionup', route)
 
 
 

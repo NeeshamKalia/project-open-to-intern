@@ -5,14 +5,11 @@ const internController= require("../controllers/internController")
 
 
 
+router.post("/colleges", collegeController.createCollege )
+router.post("/interns", internController.createIntern )
+router.get("/collegeDetails",collegeController.collegeDetails)
 
 
-
-
-
-router.post("/functionup/colleges", collegeController.createCollege )
-router.post("/functionup/interns", internController.createIntern )
-router.get("/functionup/collegeDetails",collegeController.collegeDetails)
 
 router.all("/**", function (req, res) {
     res.status(400).send({
